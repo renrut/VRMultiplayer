@@ -43,7 +43,7 @@ namespace UnityEngine.Networking
 				{
 					print (manager.networkAddress);
 					manager.StartClient();
-					//showGUI = false;
+					showGUI = false;
 				}
 			}
 			if (NetworkServer.active && manager.IsClientConnected())

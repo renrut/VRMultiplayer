@@ -4,9 +4,9 @@ using UnityEngine.Networking;
 
 public class Controller : NetworkBehaviour {
 
-//	public GameObject camera;
-//	public GameObject reticle;
-//	public GameObject eventSystem;
+	public GameObject cam;
+	public GameObject GVR;
+	public GameObject eventSystem;
 
 	// Use this for initialization
 	void Start () {
@@ -20,13 +20,12 @@ public class Controller : NetworkBehaviour {
 		foreach(SkinnedMeshRenderer s in GetComponentsInChildren<SkinnedMeshRenderer>()){
 				s.material.color = Color.blue;
 		}
-		GameObject cam = new GameObject();
-		cam.AddComponent<Camera>();
-		cam.tag = "MainCamera";
-		cam.name = "cam";
-		cam.transform.parent = gameObject.transform;
-		cam.transform.localPosition = new Vector3 (0, 2, -5);
-		cam.transform.localRotation = Quaternion.Euler (20, 0, 0);
+
+		GameObject c = Instantiate (cam);
+		GameObject viewer = Instantiate (GVR);
+		c.transform.position = gameObject.transform.position;
+		c.transform.parent = gameObject.transform;
+
 	}
 }
 
