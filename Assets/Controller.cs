@@ -4,6 +4,10 @@ using UnityEngine.Networking;
 
 public class Controller : NetworkBehaviour {
 
+//	public GameObject camera;
+//	public GameObject reticle;
+//	public GameObject eventSystem;
+
 	// Use this for initialization
 	void Start () {
 	

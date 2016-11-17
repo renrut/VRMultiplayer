@@ -36,13 +36,14 @@ namespace UnityEngine.Networking
 					if (Input.GetKeyDown(KeyCode.H))
 					{
 						manager.StartHost();
-						showGUI = false;
+						//showGUI = false;
 					}
 				}
 				if (Input.GetKeyDown(KeyCode.C))
 				{
+					print (manager.networkAddress);
 					manager.StartClient();
-					showGUI = false;
+					//showGUI = false;
 				}
 			}
 			if (NetworkServer.active && manager.IsClientConnected())
